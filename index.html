@@ -1,0 +1,368 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            background: rgb(107,2,2);
+            background: linear-gradient(180deg, rgba(107,2,2,1) 0%, rgba(251,0,0,1) 100%);
+            
+        }
+        .galeria{
+            margin: auto;
+            max-width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .cuadro{
+                width: 33%;
+                height: 500px;
+                border: 10px solid green;
+                box-shadow: 0 0 10px rgba(255,255,255,1);
+                margin: 10px 0;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                img.lazo{
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    top: -20px; 
+                    left: -20px; 
+                }
+            }
+            
+        }
+        .nieve{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .copoNieve{
+            /* width: 40px;
+            height: 40px; */
+            position: absolute;
+            top: -20px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: .8;
+            animation: animar linear infinite;
+          
+        }
+        @keyframes animar {
+            0%{
+                transform: translateY(0) rotate(0);
+                opacity: 0.8;
+            }
+            100%{
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nieve">
+        <div class="galeria">
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+            <div class="cuadro">
+                <img src="./img/lazo.png" class="lazo" alt="">
+                <img src="https://picsum.photos/400/500" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        const nieve = document.querySelector(".nieve");
+
+        //Funcion para crear un copos
+        function crearCopo() {
+            const copoNieve = document.createElement("div");
+            copoNieve.classList.add(".copoNieve");
+
+            //tamaño aleatorio de los copos entre 5px y 15px
+            const tam = Math.random() * 10 + 5; 
+            copoNieve.style.width =`${tam}px`;
+            copoNieve.style.height =`${tam}px`;
+
+            //duracion aleatoria entre 2s y 5s
+            const duracion = Math.random() * 3 + 2;
+            copoNieve.style.animationDuration = `${duracion}s`;
+
+            //posicion aleatoria 
+            copoNieve.style.left=`${Math.random() * 100}vw`;
+
+            nieve.appendChild(copoNieve);
+            setTimeout(()=>{
+                copoNieve.remove();
+            }, duracion*1000)
+        }
+
+        setInterval(crearCopo,200);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+          
+            background: red;
+            /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(87,3,3,1) 0%, rgba(255,0,0,1) 100%);
+            display: flex; */
+          
+        }
+
+        div.galeria{
+            margin: auto;
+            max-width: 80%;
+            display: flex;
+            flex-flow:wrap;
+            justify-content: space-between;
+            
+   
+
+            .cuadro{
+                width: 32%;
+                height:500px;
+                border:solid 20px #285c27;
+                box-shadow: 0 0 10px rgba(255,255,255,.5);
+                margin: 20px 0;
+                position: relative;
+                img{               
+                    width: 100%;
+                    height: 100%;
+                }                
+                
+               img.lazo {
+                width: 100px; 
+                height: 100px;              
+                position: absolute;
+                top: -50px;
+                left: -50px;
+             }
+                
+            }
+          
+        }
+        
+        .nieve{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .copoNieve{
+            /* width: 40px;
+            height: 40px; */
+            
+            position: fixed;
+            top: -10px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: .8;
+            animation:animar linear infinite;
+        }
+
+
+        @keyframes animar {
+            0%{
+             transform: translateY(0) rotate(0);  
+             opacity: 0.8;
+            }
+
+            100%{
+                transform: translateY(100vh) rotate(360deg);  
+                opacity: 0.2;
+            }
+        }
+
+        
+      </style>
+</head>
+<body>  
+    
+    <!-- <div class="copoNieve"></div> -->
+
+
+    <div class="nieve">
+   
+
+        <div class="galeria">
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+            <div class="cuadro"> 
+                <img src="img/lazo.png" alt="" class="lazo">
+                <img src="https://picsum.photos/400/500" alt=""></div>
+        </div>
+
+     
+    </div>
+    <script>
+            const nieve = document.querySelector(".nieve");
+
+            // Funcion para crear copos
+            function crearCopo() {
+                const copoNieve = document.createElement("div");
+                copoNieve.classList.add("copoNieve");
+
+                // Tamaño aleatorio copos entre 5px y 15px
+
+                const tam = Math.random() * 10 + 5;
+
+                copoNieve.style.width = `${tam}px`;
+                copoNieve.style.height = `${tam}px`;
+
+                // duración aleatoria entre 2s y 5s
+                const duracion = Math.random() * 3  + 2;
+                copoNieve.style.animationDuration =  `${duracion}s`;
+
+                // Posicion incial aleatoria
+                copoNieve.style.left = `${Math.random() * 100}vw`;
+
+                // Agregar copo a la nieve
+                nieve.appendChild(copoNieve);
+                setTimeout(()=>{
+                    copoNieve.remove();
+                }, duracion*1000)
+                
+            }
+
+        setInterval(crearCopo,200);
+
+            
+    </script>
+</body>
+</html>
